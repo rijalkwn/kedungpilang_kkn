@@ -18,13 +18,6 @@
                         <small style="color:red">{{ $message }}</small>
                     @enderror
                     <div class="form-group">
-                        <label for="">Deskripsi</label>
-                        <textarea name="description" id="" cols="30" rows="10" class="form-control" placeholder="Deskripsi"></textarea>
-                    </div>
-                    @error('description')
-                        <small style="color:red">{{ $message }}</small>
-                    @enderror
-                    <div class="form-group">
                         <label for="">Gambar</label>
                         <input type="file" class="form-control" name="image">
                     </div>

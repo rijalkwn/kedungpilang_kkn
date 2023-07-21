@@ -66,6 +66,13 @@
                         <!-- /.col -->
                     </div>
                 </form>
+                <div class="row mt-3">
+                    <!-- /.col -->
+                    <div class="col-12">
+                        <a href="/" class="btn btn-danger btn-block">Home</a>
+                    </div>
+                    <!-- /.col -->
+                </div>
             </div>
             <!-- /.card-body -->
         </div>

@@ -4,7 +4,7 @@
         <div class="container" data-aos="fade-up">
 
             <div class="section-title">
-                <h2>Visi, Misi dan Motto</h2>
+                <h2>Visi dan Misi</h2>
             </div>
 
             <div class="row">
@@ -18,11 +18,6 @@
                         <i class="bx bx-cube-alt"></i>
                         <h4>Misi</h4>
                         <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt</p>
-                    </div>
-                    <div class="icon-box mt-5">
-                        <i class="bx bx-images"></i>
-                        <h4>Motto</h4>
-                        <p>Aut suscipit aut cum nemo deleniti aut omnis. Doloribus ut maiores omnis facere</p>
                     </div>
                 </div>
                 <div class="image col-lg-6 order-1 order-lg-2" style='background-image: url("assets/img/kepalamotto.png");'

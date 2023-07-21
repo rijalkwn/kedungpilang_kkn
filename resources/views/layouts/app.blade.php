@@ -91,24 +91,18 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                         <p>Berita</p>
                                     </a>
                                 </li>
-                                <li class="nav-item">
-                                    <a href="/admin/sambutan" class="nav-link">
-                                        <i class="far fa-circle nav-icon"></i>
-                                        <p>Sambutan</p>
-                                    </a>
-                                </li>
-                                <li class="nav-item">
+                                {{-- <li class="nav-item">
                                     <a href="/admin/data" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Data Desa</p>
                                     </a>
-                                </li>
-                                <li class="nav-item">
+                                </li> --}}
+                                {{-- <li class="nav-item">
                                     <a href="/admin/services" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Services</p>
                                     </a>
-                                </li>
+                                </li> --}}
                                 <li class="nav-item">
                                     <a href="/admin/umkm" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
@@ -116,29 +110,31 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="/admin/testimoni" class="nav-link">
-                                        <i class="far fa-circle nav-icon"></i>
-                                        <p>Testimoni</p>
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="/admin/perangkat" class="nav-link">
-                                        <i class="far fa-circle nav-icon"></i>
-                                        <p>Perangkat</p>
-                                    </a>
-                                </li>
-                                <li class="nav-item">
                                     <a href="/admin/galeri" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
-                                        <p>Galery</p>
+                                        <p>Galeri</p>
                                     </a>
                                 </li>
-                                <li class="nav-item">
+                                {{-- <li class="nav-item">
                                     <a href="/admin/event" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Event</p>
                                     </a>
-                                </li>
+                                </li> --}}
+                                @if (auth()->user()->level == 'superadmin')
+                                    {{-- <li class="nav-item">
+                                        <a href="/admin/sambutan" class="nav-link">
+                                            <i class="far fa-circle nav-icon"></i>
+                                            <p>Sambutan</p>
+                                        </a>
+                                    </li> --}}
+                                    <li class="nav-item">
+                                        <a href="/admin/perangkat" class="nav-link">
+                                            <i class="far fa-circle nav-icon"></i>
+                                            <p>Perangkat</p>
+                                        </a>
+                                    </li>
+                                @endif
                             </ul>
                         </li>
                         @if (auth()->user()->level == 'superadmin')

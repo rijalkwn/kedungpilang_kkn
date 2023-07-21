@@ -20,16 +20,6 @@
                         <small style="color:red">{{ $message }}</small>
                     @enderror
 
-                    <div class="from-group">
-                        <label for="">Deskripsi</label>
-                        <br>
-                        <textarea name="description" id="" cols="80" rows="10" class="from-control" placeholder="Deskripsi">{{ $slider->description }}
-                    </textarea>
-                    </div>
-                    @error('description')
-                        <small style="color:red">{{ $message }}</small>
-                    @enderror
-
                     <img src="/image/{{ $slider->image }}" alt="" class="img-fluid">
                     <div class="from-group">
                         <label for="">Gambar</label>

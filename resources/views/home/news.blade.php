@@ -9,37 +9,27 @@
             </div>
 
             <div class="row">
-                @foreach ($news as $news)
+                @foreach ($news as $newsItem)
                     <div class="col-md-3 col-lg-4 d-flex align-items-stretch mb-5 mb-lg-0">
-                        <div class="icon-box" data-aos="fade-up" data-aos-delay="200">
-                            <div class="member-img">
-                                <img src="/image/{{ $news->image }}" alt="" class="img-fluid">
+                        <a href="/berita{{ $newsItem->id }}" style="text-decoration: none; color: inherit;">
+                            <div class="icon-box" data-aos="fade-up" data-aos-delay="200">
+                                <div class="member-img">
+                                    <img src="/image/{{ $newsItem->image }}" alt="" class=""
+                                        style="width: 300px; height: 200px; object-fit: cover;">
+                                </div>
+                                <br>
+                                <div class="text" style="align-items: justify">
+                                    <h6>{{ Str::words($newsItem->title, 8, '...') }}</h6>
+                                </div>
+                                <p class="description">{{ Str::words($newsItem->description, 10, '...') }}</p>
                             </div>
-                            <br>
-                            <div class="text-center">
-                                <h4>{{ $news->title }}</h4>
-                            </div>
-                            <p class="description">{{ substr($news->description, 0, 80) }}</p>
-                        </div>
+                        </a>
                     </div>
                 @endforeach
             </div>
-            <div class="col-md-3 col-lg-4 d-flex align-items-stretch mb-5 mb-lg-0">
-                <a href="/berita/{{ $news->id }}" style="text-decoration: none; color: inherit;">
-                    <div class="icon-box" data-aos="fade-up" data-aos-delay="200">
-                        <div class="member-img">
-                            <img src="/image/{{ $news->image }}" alt="" class="img-fluid">
-                        </div>
-                        <br>
-                        <div class="text-center">
-                            <h4>{{ $news->title }}</h4>
-                        </div>
-                        <p class="description">{{ substr($news->description, 0, 80) }}</p>
-                    </div>
-                </a>
-            </div>
-
-
+            {{-- <div class="text-center mt-4">
+                {{ $news->links() }}
+            </div> --}}
         </div>
     </section><!-- End Featured Services Section -->
 @endsection

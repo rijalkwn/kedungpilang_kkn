@@ -21,17 +21,17 @@ class HomeController extends Controller
 {
     public function index()
     {
-        $sliders = Slider::all();
+        $sliders = Slider::latest()->take(5)->get();
         $event = Event::all();
-        $news = News::all();
+        $news = News::latest()->take(6)->get();
         $perangkat = Perangkat::all();
-        $umkm = Umkm::all();
+        $umkm = Umkm::latest()->take(3)->get();
         $data = Data::all();
-        $galeri = Galeri::all();
-        $sambutan = Sambutan::all();
+        $galeri = Galeri::latest()->take(6)->get();
+        $sambutan = Sambutan::latest()->take(1)->get();
         $service = Service::all();
         $testimoni = Testimoni::all();
-
+        $title = 'Beranda';
         return view('home.index', compact(
             'sliders',
             'event',
@@ -43,7 +43,7 @@ class HomeController extends Controller
             'sambutan',
             'service',
             'testimoni',
-
+            'title'
         ));
     }
 
@@ -57,21 +57,17 @@ class HomeController extends Controller
 
     public function umkm()
     {
+        $title = 'UMKM';
         $umkm = Umkm::all();
-        return view('home.umkm', compact('umkm'));
+        return view('home.umkm', compact('umkm', 'title'));
     }
     public function galeri()
     {
+        $title = 'Galeri';
         $galeri = Galeri::all();
         return view('home.galeri', compact(
             'galeri',
-        ));
-    }
-    public function news()
-    {
-        $news = News::all();
-        return view('home.news', compact(
-            'news',
+            'title',
         ));
     }
     public function data()
@@ -83,9 +79,11 @@ class HomeController extends Controller
     }
     public function perangkat()
     {
+        $title = 'Perangkat';
         $perangkat = Perangkat::all();
-        return view('profil.sotk', compact(
+        return view('home.profil.sotk', compact(
             'perangkat',
+            'title',
         ));
     }
 }

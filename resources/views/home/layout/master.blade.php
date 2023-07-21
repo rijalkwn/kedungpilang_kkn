@@ -7,7 +7,7 @@
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-    <title>Desa Kedungpilang</title>
+    <title>{{ $title }} | Desa Kedungpilang</title>
     <meta content="" name="description">
     <meta content="" name="keywords">
 
@@ -48,15 +48,24 @@
     <!-- ======= Header ======= -->
     <header id="header" class="fixed-top">
         <div class="container d-flex align-items-center">
-
-            <a href="#" class="logo me-auto"><img src="assets/img/logo.png" alt=""></a>
-            <!-- Uncomment below if you prefer to use an image logo -->
-            <!-- <h1 class="logo me-auto"><a href="index.html">Medicio</a></h1> -->
-
+            <div class="logo me-auto">
+                <div class="row my-auto">
+                    {{-- <div class="col-auto"> --}}
+                    {{-- <img src="assets/img/logo.png" alt="Logo"> --}}
+                    <strong style="font-size: 10px">Desa Kedungpilang</strong>
+                    <strong style="font-size: 10px">Kab Boyolali</strong>
+                    {{-- </div> --}}
+                    {{-- <div class="col-auto my-auto">
+                        <strong style="font-size: 10px">Desa Kedungpilang</strong><br>
+                        <strong style="font-size: 10px">Kab Boyolali</strong>
+                    </div> --}}
+                </div>
+            </div>
             @include('home.layout.navbar')
-
         </div>
-    </header><!-- End Header -->
+    </header>
+    <!-- End Header -->
+
     <!-- ======= Hero Section ======= -->
     <section>
     </section><!-- End Hero -->

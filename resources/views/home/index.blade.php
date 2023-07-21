@@ -6,16 +6,17 @@
         <ol class="carousel-indicators" id="hero-carousel-indicators"></ol>
 
         <div class="carousel-inner" role="listbox">
-            @foreach ($sliders as $index => $slider)
-                <!-- Slide 1 -->
-                <div class="carousel-item {{ $index === 0 ? 'active' : '' }}"
-                    style="background-image: url(image/{{ $slider->image }})">
-                    <div class="container">
-                        <h2>{{ $slider->title }}</h2>
-                        <p>{{ $slider->description }}</p>
+            @foreach ($news as $index => $newsItem)
+                <a href="/berita{{ $newsItem->id }}" style="text-decoration: none; color: inherit;">
+                    <!-- News Item {{ $index + 1 }} -->
+                    <div class="carousel-item {{ $index === 0 ? 'active' : '' }}"
+                        style="background-image: url(image/{{ $newsItem->image }})">
+                        <div class="container">
+                            <h5>{{ $newsItem->title }}</h5>
 
+                        </div>
                     </div>
-                </div>
+                </a>
             @endforeach
         </div>
 
@@ -29,29 +30,35 @@
 
     </div>
 </section><!-- End Hero -->
+
 @section('content')
     <!-- ======= About Us Section ======= -->
     <section id="about" class="about">
         <div class="container" data-aos="fade-up">
-            @foreach ($sambutan as $sambutan)
-                <div class="section-title">
-                    <h2>Sambutan Kepala Desa</h2>
-                </div>
+            <div class="section-title">
+                <h2>Sambutan Kepala Desa</h2>
+            </div>
 
-                <div class="row">
-                    <div class="col-lg-6" data-aos="fade-right">
-                        <img src="/image/{{ $sambutan->image }}" class="img-fluid" alt="">
-                    </div>
-                    <div class="col-lg-6 pt-4 pt-lg-0 content" data-aos="fade-left">
-                        <h3>{{ $sambutan->title }}</h3>
-                        <br>
-                        <p>
-                            {{ $sambutan->description }}
-                        </p>
-                    </div>
+            <div class="row">
+                <div class="col-lg-5" data-aos="fade-right">
+                    <img src="/asstes/img/logo.png" class="img-fluid" alt="">
                 </div>
-            @endforeach
-        </div>
+                <div class="col-lg-7 pt-4 pt-lg-0 content" data-aos="fade-left">
+                    <h3>Res Hadi Jatmiko</h3>
+                    <br>
+                    <p style="text-align: justify">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                        Consectetur, non perspiciatis hic vitae
+                        doloribus provident itaque. Alias exercitationem blanditiis debitis saepe at laboriosam quasi ex
+                        perspiciatis, vero nam esse quam iste, obcaecati soluta quia nostrum, nobis incidunt veritatis
+                        expedita nulla atque in necessitatibus? Officiis quae eius dolore distinctio sunt eaque adipisci
+                        debitis excepturi. Porro maiores tempora laborum, quasi excepturi repellat soluta atque neque
+                        architecto nam vitae animi aliquid aspernatur libero aperiam provident culpa modi, voluptatem
+                        nemo officia suscipit corrupti qui! Suscipit magni fugiat praesentium doloremque saepe quaerat
+                        dolore ut veniam ex voluptatibus! Aut distinctio quas cupiditate maiores id, ex quaerat porro
+                        vel error consequuntur aperiam maxime eveniet ducimus dolores. Iusto dolorem.
+                    </p>
+                </div>
+            </div>
     </section><!-- End About Us Section -->
     <!-- ======= Featured Services Section ======= -->
     <section id="featured-services" class="featured-services">
@@ -64,16 +71,20 @@
             <div class="row">
                 @foreach ($news as $news)
                     <div class="col-md-3 col-lg-4 d-flex align-items-stretch mb-5 mb-lg-0">
-                        <div class="icon-box" data-aos="fade-up" data-aos-delay="200">
-                            <div class="member-img">
-                                <img src="/image/{{ $news->image }}" alt="" class="img-fluid">
+                        <a href="/berita{{ $news->id }}" style="text-decoration: none; color: inherit;">
+                            <div class="icon-box" data-aos="fade-up" data-aos-delay="200">
+                                <div class="member-img">
+                                    <img src="/image/{{ $news->image }}" alt="" class=""
+                                        style="width: 300px; height: 200px; object-fit: cover;">
+
+                                </div>
+                                <br>
+                                <div class="text-center">
+                                    <h6>{{ Str::words($news->title, 6, '...') }}</h6>
+                                </div>
+                                <p class="description">{{ Str::words($news->description, 8, '...') }}</p>
                             </div>
-                            <br>
-                            <div class="text-center">
-                                <h4>{{ $news->title }}</h4>
-                            </div>
-                            <p class="description">{{ $news->description }}</p>
-                        </div>
+                        </a>
                     </div>
                 @endforeach
             </div>
@@ -97,8 +108,8 @@
                                 <img src="/image/{{ $perangkat->image }}" class="img-fluid" alt="">
                             </div>
                             <div class="member-info">
-                                <h4>{{ $perangkat->title }}</h4>
-                                <span>{{ $perangkat->description }}</span>
+                                <h4>{{ $perangkat->nama }}</h4>
+                                <h6>{{ $perangkat->jabatan }}</h6>
                             </div>
                         </div>
                     </div>
@@ -126,7 +137,7 @@
     </section><!-- End Cta Section --> --}}
 
     <!-- ======= Counts Section ======= -->
-    <section id="featured-services" class="featured-services">
+    {{-- <section id="featured-services" class="featured-services">
         <div class="container" data-aos="fade-up">
 
             <div class="section-title">
@@ -148,7 +159,7 @@
             </div>
 
         </div>
-    </section><!-- End Featured Services Section -->
+    </section><!-- End Featured Services Section --> --}}
 
     <!-- ======= Features Section ======= -->
 
@@ -156,7 +167,7 @@
         <div class="container" data-aos="fade-up">
 
             <div class="section-title">
-                <h2>Visi, Misi dan Motto</h2>
+                <h2>Visi dan Misi</h2>
             </div>
 
             <div class="row">
@@ -170,11 +181,6 @@
                         <i class="bx bx-cube-alt"></i>
                         <h4>Misi</h4>
                         <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt</p>
-                    </div>
-                    <div class="icon-box mt-5">
-                        <i class="bx bx-images"></i>
-                        <h4>Motto</h4>
-                        <p>Aut suscipit aut cum nemo deleniti aut omnis. Doloribus ut maiores omnis facere</p>
                     </div>
                 </div>
                 <div class="image col-lg-6 order-1 order-lg-2" style='background-image: url("assets/img/kepalamotto.png");'
@@ -244,16 +250,11 @@
                         <div class="swiper-slide{{ $index === 0 ? 'active' : '' }}">
                             <a class="gallery-lightbox" href="image/{{ $galeri->image }}"> <img
                                     src="image/{{ $galeri->image }}" class="img-fluid" alt=""> </a>
-
                         </div>
                     @endforeach
                 </div>
-                <div class="swiper-pagination">
-
+                <div class="swiper-pagination" style="margin-top: -400px">
                 </div>
-
-
             </div>
-
         </div>
     </section><!-- End Gallery Section -->

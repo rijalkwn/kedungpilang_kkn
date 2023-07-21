@@ -38,7 +38,7 @@ class PerangkatController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'title' => 'required', 'description' => 'required', 'image' => 'required|image',
+            'nama' => 'required', 'jabatan' => 'required', 'image' => 'required|image',
         ]);
 
         $input = $request->all();
@@ -88,7 +88,7 @@ class PerangkatController extends Controller
     public function update(Request $request, Perangkat $perangkat)
     {
         $request->validate([
-            'title' => 'required', 'description' => 'required', 'image' => 'image',
+            'nama' => 'required', 'jabatan' => 'required', 'image' => 'image',
         ]);
 
         $input = $request->all();

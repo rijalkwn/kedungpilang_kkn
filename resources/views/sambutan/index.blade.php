@@ -6,7 +6,9 @@
 
     <div class="container">
 
+        {{-- @if (count($sambutan) > 0) --}}
         <a href="/admin/sambutan/create" class="btn btn-primary mb-3">Tambah Data</a>
+        {{-- @endif --}}
 
         @if ($message = Session::get('message'))
             <div class="alert alert-success">

@@ -2,7 +2,12 @@
 @section('content')
     <section id="doctors" class="doctors section-bg">
         <div class="container" data-aos="fade-up">
-
+            <div class="section-title">
+                <h2>Struktur Organisasi</h2>
+            </div>
+            <div class="row">
+                <img src="" alt="">
+            </div>
             <div class="section-title">
                 <h2>Perangkat Desa</h2>
             </div>
@@ -15,8 +20,8 @@
                                 <img src="/image/{{ $perangkat->image }}" class="img-fluid" alt="">
                             </div>
                             <div class="member-info">
-                                <h4>{{ $perangkat->title }}</h4>
-                                <span>{{ $perangkat->description }}</span>
+                                <h4>{{ $perangkat->nama }}</h4>
+                                <h6>{{ $perangkat->jabatan }}</h6>
                             </div>
                         </div>
                     </div>

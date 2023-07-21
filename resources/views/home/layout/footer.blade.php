@@ -28,7 +28,7 @@
                     <ul>
                         <li><i class="bx bx-chevron-right"></i> <a href="/">Beranda</a></li>
                         <li><i class="bx bx-chevron-right"></i> <a href="/profil">Profil</a></li>
-                        {{-- <li><i class="bx bx-chevron-right"></i> <a href="/informasi">Informasi Layanan</a></li> --}}
+                        <li><i class="bx bx-chevron-right"></i> <a href="/informasi">Informasi Layanan</a></li>
                         <li><i class="bx bx-chevron-right"></i> <a href="/berita">Berita</a></li>
                         <li><i class="bx bx-chevron-right"></i> <a href="/galeri">Galeri</a></li>
                     </ul>

@@ -17,7 +17,6 @@ class SliderController extends Controller
         $sliders = Slider::all();
 
         return view('slider.index', compact('sliders'));
-     
     }
 
     /**
@@ -40,7 +39,7 @@ class SliderController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'title' => 'required', 'description' => 'required', 'image' => 'required|image',
+            'title' => 'required', 'image' => 'required|image',
         ]);
 
         $input = $request->all();
@@ -107,7 +106,6 @@ class SliderController extends Controller
         $slider->update($input);
 
         return redirect('admin/sliders')->with('message', 'Data berhasil diedit');
-   
     }
 
     /**

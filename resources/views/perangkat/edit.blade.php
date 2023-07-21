@@ -12,18 +12,18 @@
                     @method('PUT')
                     @csrf
                     <div class="form-group">
-                        <label for="">Judul</label>
-                        <input type="text" class="form-control" name="title" placeholder="Judul"
+                        <label for="">Nama</label>
+                        <input type="text" class="form-control" name="nama" placeholder="nama"
                             value="{{ $perangkat->title }}">
                     </div>
-                    @error('title')
+                    @error('nama')
                         <small style="color:red">{{ $message }}</small>
                     @enderror
                     <div class="form-group">
-                        <label for="">Deskripsi</label>
-                        <textarea name="description" id="" cols="30" rows="10" class="form-control" placeholder="Deskripsi">{{ $perangkat->description }}</textarea>
+                        <label for="">Jabatan</label>
+                        <textarea name="jabatan" id="" cols="30" rows="10" class="form-control" placeholder="jabatan">{{ $perangkat->description }}</textarea>
                     </div>
-                    @error('description')
+                    @error('jabatan')
                         <small style="color:red">{{ $message }}</small>
                     @enderror
                     <img src="/image/{{ $perangkat->image }}" alt="" class="img-fluid">

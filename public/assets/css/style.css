@@ -31,7 +31,6 @@ h5,
 h6 {
   font-family: "Roboto", sans-serif;
 }
-
 /*--------------------------------------------------------------
 # Preloader
 --------------------------------------------------------------*/
@@ -215,7 +214,7 @@ h6 {
 # Navigation Menu
 --------------------------------------------------------------*/
 /**
-* Desktop Navigation 
+* Desktop Navigation
 */
 .navbar {
   padding: 0;
@@ -327,7 +326,7 @@ h6 {
 }
 
 /**
-* Mobile Navigation 
+* Mobile Navigation
 */
 .mobile-nav-toggle {
   color: #555555;
@@ -1775,7 +1774,7 @@ section {
 }
 
 #footer .footer-top .footer-links ul a {
-  color: #555555;
+  color: #2e2525;
   transition: 0.3s;
   display: inline-block;
   line-height: 1;

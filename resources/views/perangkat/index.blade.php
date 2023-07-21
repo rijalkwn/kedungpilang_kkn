@@ -19,8 +19,8 @@
                 <thead>
                     <tr>
                         <th>No</th>
-                        <th>Judul</th>
-                        <th>Deskripsi</th>
+                        <th>Nama</th>
+                        <th>Jabatan</th>
                         <th>Gambar</th>
                         <th>Aksi</th>
                     </tr>
@@ -32,8 +32,8 @@
                     @foreach ($perangkat as $perangkat)
                         <tr>
                             <td>{{ $i++ }}</td>
-                            <td>{{ $perangkat->title }}</td>
-                            <td>{{ $perangkat->description }}</td>
+                            <td>{{ $perangkat->nama }}</td>
+                            <td>{{ $perangkat->jabatan }}</td>
                             <td>
                                 <img src="/image/{{ $perangkat->image }}" alt="" class="img-fluid" width="90">
                             </td>

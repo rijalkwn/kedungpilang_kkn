@@ -20,7 +20,6 @@
                     <tr>
                         <th>No</th>
                         <th>Judul</th>
-                        <th>Deskripsi</th>
                         <th>Gambar</th>
                         <th>Aksi</th>
                     </tr>
@@ -33,7 +32,6 @@
                         <tr>
                             <td>{{ $i++ }}</td>
                             <td>{{ $slider->title }}</td>
-                            <td>{{ $slider->description }}</td>
                             <td>
                                 <img src="/image/{{ $slider->image }}" alt="" class="img-fluid" width="90">
                             </td>
