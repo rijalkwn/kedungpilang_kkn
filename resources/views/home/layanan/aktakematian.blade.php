@@ -4,6 +4,12 @@
         <h2>SYARAT PENCATATAN AKTA KEMATIAN</h2>
     </div>
     <div class="container">
+        <div class="alert alert-success">
+            <h4>Info Penting!!</h4>
+            <p>
+                Siapkan Materai Rp 10.000
+            </p>
+        </div>
         <h6>1. PERSYARATAN UMUM PENERBITAN AKTA</h6>
         <ul>
             <li>Asli Surat Keterangan Kematian dari Dokter/Rumah Sakit</li>

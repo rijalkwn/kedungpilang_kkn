@@ -4,6 +4,12 @@
         <h2>SYARAT PENCATATAN PERUBAHAN NAMA</h2>
     </div>
     <div class="container">
+        <div class="alert alert-success">
+            <h4>Info Penting!!</h4>
+            <p>
+                Siapkan Materai Rp 10.000
+            </p>
+        </div>
         <h6>1. SYARAT PENCATATAN PERUBAHAN NAMA</h6>
         <ul>
             <li>Mengisi Formulir Permohonan</li>

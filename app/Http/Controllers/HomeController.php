@@ -4,41 +4,39 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\HtSupporttp\Facades\DB;
+use Illuminate\Support\Facades\Storage;
+
 
 // use App\Models\Sliders;
 use App\Models\Event;
 use App\Models\News;
 use App\Models\Perangkat;
 use App\Models\Umkm;
-use App\Models\Slider;
+use App\Models\Penyewaan;
 use App\Models\Data;
 use App\Models\Galeri;
 use App\Models\Sambutan;
 use App\Models\Service;
 use App\Models\Testimoni;
+use App\Models\Pupuk;
+use App\Models\Mitrabumdes;
 
 class HomeController extends Controller
 {
     public function index()
     {
-        $sliders = Slider::latest()->take(5)->get();
-        $event = Event::all();
         $news = News::latest()->take(6)->get();
         $perangkat = Perangkat::all();
         $umkm = Umkm::latest()->take(3)->get();
-        $data = Data::all();
         $galeri = Galeri::latest()->take(6)->get();
         $sambutan = Sambutan::latest()->take(1)->get();
         $service = Service::all();
         $testimoni = Testimoni::all();
         $title = 'Beranda';
         return view('home.index', compact(
-            'sliders',
-            'event',
             'news',
             'perangkat',
             'umkm',
-            'data',
             'galeri',
             'sambutan',
             'service',
@@ -70,6 +68,15 @@ class HomeController extends Controller
             'title',
         ));
     }
+
+    public function potensi()
+    {
+        $title = 'Potensi';
+        return view('home.profil.potensi', compact(
+            'title',
+        ));
+    }
+
     public function data()
     {
         $data = Data::all();
@@ -84,6 +91,44 @@ class HomeController extends Controller
         return view('home.profil.sotk', compact(
             'perangkat',
             'title',
+        ));
+    }
+
+    public function pupuk()
+    {
+        $title = 'Pupuk';
+        $pupuk = Pupuk::all();
+        return view('home.bumdes.pupuk', compact(
+            'pupuk',
+            'title',
+        ));
+    }
+
+    public function bumdes()
+    {
+        $title = 'Bumdes';
+        return view('home.bumdes.bumdes', compact(
+            'title',
+        ));
+    }
+
+    public function mitrabumdes()
+    {
+        $title = 'Mitra Bumdes';
+        $mitrabumdes = Mitrabumdes::all();
+        return view('home.bumdes.mitrabumdes', compact(
+            'mitrabumdes',
+            'title',
+        ));
+    }
+
+    public function penyewaanalat()
+    {
+        $title = 'Penyewaan Alat';
+        $penyewaan = Penyewaan::all();
+        return view('home.bumdes.penyewaan', compact(
+            'title',
+            'penyewaan',
         ));
     }
 }

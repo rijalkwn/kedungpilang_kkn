@@ -2,12 +2,43 @@
 @section('content')
     <section id="featured-services" class="featured-services">
         <div class="container" data-aos="fade-up">
+            <section id="visimisi" class="features">
+                <div class="container" data-aos="fade-up">
 
-            <div class="section-title">
-                <h2>Potensi Desa Kedungpilang</h2>
-            </div>
+                    <div class="section-title">
+                        <h2>Potensi Desa Kedungpilang</h2>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-8" data-aos="fade-right">
+                            <p style="text-align: justify">Desa Kedungpilang terletak di Kecamatan Wonosamodro, Kabupaten
+                                Boyolali. Desa Kedungpilang memiliki luas wilayah sebesar 398,1 Ha dengan
+                                pembagian luas penggunaan
+                                lahan untuk
+                                Tanah Sawah sebesar 111,98 Ha dan untuk Tanah Kering 286,12 Ha. Desa Kedungpilang
+                                memiliki demografi
+                                penduduk dengan jumlah laki-laki sebanyak 1.146 orang dan perempuan sebanyak 1.132
+                                orang. Kepadatan
+                                penduduk desa ini ialah sebesar 572 per Km2. Mayoritas penduduk di desa ini berprofesi
+                                sebagai
+                                petani, peternak, dan pegawai. Desa ini memiliki beberapa komoditas keunggulan,
+                                diantaranya Jagung
+                                dan Singkong. Di Desa Kedungpilang sendiri terdapat 5 dusun diantaranya Kedungpilang,
+                                Gambir, Kedung Bulu, Kunciombo, dan Kedung Padas.</p>
+                        </div>
+                        <div class="col-lg-4">
+                            <img src="{{ asset('assets/img/peta.png') }}" class="img-fluid" alt="">
+                        </div>
+                    </div>
 
-            <div class="row">
+                    {{-- <p>Desa Kedungpilang memiliki luas wilayah sebesar 398,1 Ha dengan pembagian luas penggunaan lahan untuk
+                        Tanah Sawah sebesar 111,98 Ha dan untuk Tanah Kering 286,12 Ha. Desa Kedungpilang memiliki demografi
+                        penduduk dengan jumlah laki-laki sebanyak 1.146 orang dan perempuan sebanyak 1.132 orang. Kepadatan
+                        penduduk desa ini ialah sebesar 572 per Km2. Mayoritas penduduk di desa ini berprofesi sebagai
+                        petani, peternak, dan pegawai. Desa ini memiliki beberapa komoditas keunggulan, diantaranya Jagung
+                        dan Singkong. Di Desa Kedungpilang sendiri terdapat 5 dusun.</p> --}}
+                </div>
+            </section><!-- End Features Section -->
+            {{-- <div class="row">
                 <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
                     <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
                         <div class="icon"><i class="fas fa-heartbeat"></i></div>
@@ -44,7 +75,7 @@
                     </div>
                 </div>
 
-            </div>
+            </div> --}}
 
         </div>
     </section>

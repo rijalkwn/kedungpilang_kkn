@@ -10,7 +10,7 @@
 
             <div class="row">
                 @foreach ($umkm as $umkmItem)
-                    <div class="col-md-3 col-lg-4 d-flex align-items-stretch mb-5 mb-lg-0">
+                    <div class="col-md-3 col-lg-4 d-flex align-items-stretch mb-4 mb-lg-0 mt-4">
                         <a href="/umkm{{ $umkmItem->id }}" style="text-decoration: none; color: inherit;">
                             <div class="icon-box" data-aos="fade-up" data-aos-delay="200">
                                 <div class="member-img">
@@ -27,9 +27,19 @@
                     </div>
                 @endforeach
             </div>
-
-            {{-- <div class="text-center mt-4">
-                {{ $umkm->links() }}
+            {{-- <div class="row mt-4">
+                <nav aria-label="...">
+                    <ul class="pagination">
+                        <li class="page-item {{ $currentPage == 1 ? 'disabled' : '' }}">
+                            <a class="page-link" href="{{ $currentPage == 1 ? '#' : '?page=' . ($currentPage - 1) }}"
+                                tabindex="-1" aria-disabled="{{ $currentPage == 1 ? 'true' : 'false' }}">Previous</a>
+                        </li>
+                        <li class="page-item {{ $currentPage == $lastPage ? 'disabled' : '' }}">
+                            <a class="page-link"
+                                href="{{ $currentPage == $lastPage ? '#' : '?page=' . ($currentPage + 1) }}">Next</a>
+                        </li>
+                    </ul>
+                </nav>
             </div> --}}
         </div>
     </section><!-- End Featured Services Section -->

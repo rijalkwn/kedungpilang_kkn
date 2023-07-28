@@ -4,6 +4,12 @@
         <h2>SYARAT PEMBUATAN AKTA KELAHIRAN</h2>
     </div>
     <div class="container">
+        <div class="alert alert-success">
+            <h4>Info Penting!!</h4>
+            <p>
+                Siapkan Materai Rp 10.000
+            </p>
+        </div>
         <h6>A. Persyaratan Penerbitan Akta Kelahiran</h6>
         <ul>
             <li>Formulir F2.01 dari Desa/Kelurahan</li>

@@ -4,6 +4,12 @@
         <h2>SYARAT PERSYARATAN AKTA PERKAWINAN</h2>
     </div>
     <div class="container">
+        <div class="alert alert-success">
+            <h4>Info Penting!!</h4>
+            <p>
+                Siapkan Materai Rp 10.000
+            </p>
+        </div>
         <h6>1. SYARAT PENCATATAN PERKAWINAN WNI DI WILAYAH NKRI</h6>
         <ul>
             <li>Surat keterangan lelah terjadinya perkawinan dari pemuka Agama atau

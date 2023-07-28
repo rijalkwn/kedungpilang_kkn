@@ -45,14 +45,16 @@ class UserController extends Controller
                 'password' => 'required',
             ],
             [
-                'username.unique' => 'Username harus unik.'
+                'username.unique' => 'Username sudah tersedia.'
             ]
         );
-
-
-
+        //user input
         $input = $request->all();
 
+        //enkripsi password
+        $input['password'] = bcrypt($request->password);
+
+        //simpan data
         User::create($input);
 
 
@@ -91,10 +93,15 @@ class UserController extends Controller
     public function update(Request $request, User $user)
     {
         $request->validate([
-            'name' => 'required', 'username' => 'required', 'level' => 'required', 'password' => 'required',
+            'name' => 'required',
+            'username' => 'required',
+            'level' => 'required',
+        ], [
+            'username.unique' => 'Username sudah tersedia'
         ]);
 
         $input = $request->all();
+        //enkripsi password
 
         $user->update($input);
 

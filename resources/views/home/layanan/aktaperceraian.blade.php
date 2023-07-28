@@ -4,6 +4,12 @@
         <h2>SYARAT PENCATATAN AKTA PERCERAIAN</h2>
     </div>
     <div class="container">
+        <div class="alert alert-success">
+            <h4>Info Penting!!</h4>
+            <p>
+                Siapkan Materai Rp 10.000
+            </p>
+        </div>
         <h6>1. SYARAT PENCATATAN AKTA PERCERAIAN</h6>
         <ul>
             <li>Foto Copy Penetapan Pengadilan Negeri tempat pemohon yang mempunyai kekuatan hukum tetap</li>
@@ -18,7 +24,7 @@
             </li>
         </ul>
         <br>
-        <h6>B. PENERBITAN AKTA PERCERAIAN</h6>
+        <h6>2. PENERBITAN AKTA PERCERAIAN</h6>
         <ul>
             <li>Salinan Putusan dari Pengadilan yang telah mempunyai kekuatan hukum tetap</li>
             <li>Kutipan Akta Perkawinan (Asli)</li>
@@ -26,7 +32,7 @@
             <li>Mengisi Formulir Pencatatan Perceraian (F2.19)</li>
         </ul>
         <br>
-        <h6>C. PENERBITAN SURAT KETERANGAN PEMBATALAN PERCERAIAN</h6>
+        <h6>3. PENERBITAN SURAT KETERANGAN PEMBATALAN PERCERAIAN</h6>
         <ul>
             <li>Mengisi Formulir Pelaporan Pembatalan Perceraian (F2.26)</li>
             <li>Salinan Putusan Pengadilan yang telah mempunyai hukum tetap</li>
@@ -34,7 +40,7 @@
             <li>KTP-el dan KK para pihak</li>
         </ul>
         <br>
-        <h6>D. PENERBITAN SURAT KETERANGAN PEMBATALAN PERKAWINAN </h6>
+        <h6>4. PENERBITAN SURAT KETERANGAN PEMBATALAN PERKAWINAN </h6>
         <ul>
             <li>Mengisi formulir Pencatatan Pembatalan Perkawinan (F2.17)</li>
             <li>Salinan putusan pengadilan yang telah mempunyai hukum tetap</li>

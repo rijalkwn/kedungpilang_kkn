@@ -12,7 +12,7 @@
     <meta content="" name="keywords">
 
     <!-- Favicons -->
-    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+    {{-- <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon"> --}}
 
     <link rel="icon" type="image/png" href="/assets/img/logo.png">
     <!-- Google Fonts -->
@@ -50,15 +50,15 @@
         <div class="container d-flex align-items-center">
             <div class="logo me-auto">
                 <div class="row my-auto">
-                    {{-- <div class="col-auto"> --}}
-                    {{-- <img src="assets/img/logo.png" alt="Logo"> --}}
-                    <strong style="font-size: 10px">Desa Kedungpilang</strong>
-                    <strong style="font-size: 10px">Kab Boyolali</strong>
-                    {{-- </div> --}}
-                    {{-- <div class="col-auto my-auto">
-                        <strong style="font-size: 10px">Desa Kedungpilang</strong><br>
-                        <strong style="font-size: 10px">Kab Boyolali</strong>
-                    </div> --}}
+                    <div class="col my-auto py-auto">
+                        <img src="assets/img/logo-boyolali.jpg" alt="Logo">
+                        {{-- <strong style="font-size: 10px">Desa Kedungpilang</strong>
+                        <strong style="font-size: 10px">Kab Boyolali</strong> --}}
+                    </div>
+                    <div class="col-auto" style="display:flex; flex-direction:column; justify-content:center;">
+                        <strong style="font-size: 13px">Desa Kedungpilang</strong>
+                        <strong style="font-size: 13px">Kab Boyolali</strong>
+                    </div>
                 </div>
             </div>
             @include('home.layout.navbar')

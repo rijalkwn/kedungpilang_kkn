@@ -17,31 +17,24 @@
                             value="{{ $user->name }}">
                     </div>
                     @error('name')
-                        <div class="form-group">
-                            <label for="">Level</label>
-                            <input type="text" class="form-control" name="name" placeholder="Nama"
-                                value="{{ $user->level }}">
-                        </div>
-                        @error('Level')
-                            <small style="color:red">{{ $message }}</small>
-                        @enderror
                         <small style="color:red">{{ $message }}</small>
                     @enderror
                     <div class="form-group">
-                        <label for="">Email</label>
-                        <input type="text" class="form-control" name="name" placeholder="Email"
-                            value="{{ $user->email }}">{{ $user->email }}
+                        <label for="">Level</label>
+                        <select class="form-control" name="level" value="{{ $user->level }}">
+                            <option value="admin">Admin</option>
+                            <option value="superadmin">Superadmin</option>
+                        </select>
                     </div>
-                    @error('email')
+                    @error('level')
                         <small style="color:red">{{ $message }}</small>
                     @enderror
-
                     <div class="form-group">
-                        <label for="">Password</label>
-                        <input type="text" class="form-control" name="name" placeholder="Nama"
-                            value="{{ $user->password }}">
+                        <label for="">Username</label>
+                        <input type="text" class="form-control" name="username" placeholder="Username"
+                            value="{{ $user->username }}">
                     </div>
-                    @error('password')
+                    @error('username')
                         <small style="color:red">{{ $message }}</small>
                     @enderror
                     <div class="form-group">

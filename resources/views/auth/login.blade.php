@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Login</title>
+    <title>Login | Desa Kedungpilang</title>
 
     <!-- Google Font: Source Sans Pro -->
     <link rel="stylesheet"
@@ -34,7 +34,7 @@
                     </div>
                 @enderror
 
-                <form action method="post">
+                <form method="post" action="{{ route('login') }}">
                     @csrf
                     <div class="input-group mb-3">
                         <input type="text" class="form-control" placeholder="Username" name="username">

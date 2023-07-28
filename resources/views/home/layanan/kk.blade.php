@@ -4,6 +4,12 @@
         <h2>SYARAT PEMBUATAN KARTU KELUARGA</h2>
     </div>
     <div class="container">
+        <div class="alert alert-success">
+            <h4>Info Penting!!</h4>
+            <p>
+                Siapkan Materai Rp 10.000
+            </p>
+        </div>
         <h6>1. PERMOHONAN KK BARU</h6>
         <ul>
             <li>Surat pengantar RT / RW dan Kelurahan</li>

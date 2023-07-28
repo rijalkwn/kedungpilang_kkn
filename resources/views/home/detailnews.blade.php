@@ -36,7 +36,7 @@
                         <div class="card-body">
                             <h5 class="card-title">Berita Lain</h5>
                             <ul class="list-group list-group-flush">
-                                @foreach ($otherNews as $other)
+                                @foreach ($otherNews->slice(0, 6) as $other)
                                     <li class="list-group-item">
                                         <a href="/berita{{ $other->id }}">
                                             <div class="row">
@@ -45,7 +45,7 @@
                                                 </div>
                                                 <div class="col-md-8">
                                                     <p style="font-size: 12px; color:rgb(31, 179, 229)">
-                                                        {{ Str::words($other->title, 4, '...') }}
+                                                        {{ Str::words($other->title, 7, '...') }}
                                                     </p>
                                                 </div>
                                             </div>

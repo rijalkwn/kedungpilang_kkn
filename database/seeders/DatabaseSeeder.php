@@ -21,7 +21,7 @@ class DatabaseSeeder extends Seeder
             'name' => 'Admin Desa Kedungpilang',
             'username' => 'admindesa',
             'level' => 'superadmin',
-            'password' => Hash::make('proadmindesa')
+            'password' => Hash::make('admindesa123')
         ]);
         User::create([
             'name' => 'Admin Dukuh Kedungpilang',
@@ -52,6 +52,12 @@ class DatabaseSeeder extends Seeder
             'username' => 'adminkedungpadas',
             'level' => 'admin',
             'password' => Hash::make('kedungpadas123')
+        ]);
+        User::create([
+            'name' => 'Admin Bumdes',
+            'username' => 'adminbumdes',
+            'level' => 'admin',
+            'password' => Hash::make('bumdes123')
         ]);
     }
 }

@@ -10,10 +10,9 @@
                 <a href="/berita{{ $newsItem->id }}" style="text-decoration: none; color: inherit;">
                     <!-- News Item {{ $index + 1 }} -->
                     <div class="carousel-item {{ $index === 0 ? 'active' : '' }}"
-                        style="background-image: url(image/{{ $newsItem->image }})">
+                        style="background-image: url(image/{{ $newsItem->image }});">
                         <div class="container">
                             <h5>{{ $newsItem->title }}</h5>
-
                         </div>
                     </div>
                 </a>
@@ -31,41 +30,51 @@
     </div>
 </section><!-- End Hero -->
 
+
 @section('content')
     <!-- ======= About Us Section ======= -->
-    <section id="about" class="about">
+    <section id="visimisi" class="features">
         <div class="container" data-aos="fade-up">
-            <div class="section-title">
-                <h2>Sambutan Kepala Desa</h2>
-            </div>
 
+            <div class="section-title">
+                <h2>Tentang Desa Kedungpilang</h2>
+            </div>
             <div class="row">
-                <div class="col-lg-5" data-aos="fade-right">
-                    <img src="/asstes/img/logo.png" class="img-fluid" alt="">
+                <div class="col-lg-8" data-aos="fade-right">
+                    <p style="text-align: justify">Desa Kedungpilang terletak di Kecamatan Wonosamodro, Kabupaten
+                        Boyolali. Desa Kedungpilang memiliki luas wilayah sebesar 398,1 Ha dengan
+                        pembagian luas penggunaan
+                        lahan untuk
+                        Tanah Sawah sebesar 111,98 Ha dan untuk Tanah Kering 286,12 Ha. Desa Kedungpilang
+                        memiliki demografi
+                        penduduk dengan jumlah laki-laki sebanyak 1.146 orang dan perempuan sebanyak 1.132
+                        orang. Kepadatan
+                        penduduk desa ini ialah sebesar 572 per Km2. Mayoritas penduduk di desa ini berprofesi
+                        sebagai
+                        petani, peternak, dan pegawai. Desa ini memiliki beberapa komoditas keunggulan,
+                        diantaranya Jagung
+                        dan Singkong. Di Desa Kedungpilang sendiri terdapat 5 dusun diantaranya Kedungpilang,
+                        Gambir, Kedung Bulu, Kunciombo, dan Kedung Padas.</p>
                 </div>
-                <div class="col-lg-7 pt-4 pt-lg-0 content" data-aos="fade-left">
-                    <h3>Res Hadi Jatmiko</h3>
-                    <br>
-                    <p style="text-align: justify">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                        Consectetur, non perspiciatis hic vitae
-                        doloribus provident itaque. Alias exercitationem blanditiis debitis saepe at laboriosam quasi ex
-                        perspiciatis, vero nam esse quam iste, obcaecati soluta quia nostrum, nobis incidunt veritatis
-                        expedita nulla atque in necessitatibus? Officiis quae eius dolore distinctio sunt eaque adipisci
-                        debitis excepturi. Porro maiores tempora laborum, quasi excepturi repellat soluta atque neque
-                        architecto nam vitae animi aliquid aspernatur libero aperiam provident culpa modi, voluptatem
-                        nemo officia suscipit corrupti qui! Suscipit magni fugiat praesentium doloremque saepe quaerat
-                        dolore ut veniam ex voluptatibus! Aut distinctio quas cupiditate maiores id, ex quaerat porro
-                        vel error consequuntur aperiam maxime eveniet ducimus dolores. Iusto dolorem.
-                    </p>
+                <div class="col-lg-4">
+                    <img src="{{ asset('assets/img/peta.png') }}" class="img-fluid" alt="">
                 </div>
             </div>
-    </section><!-- End About Us Section -->
+
+            {{-- <p>Desa Kedungpilang memiliki luas wilayah sebesar 398,1 Ha dengan pembagian luas penggunaan lahan untuk
+                Tanah Sawah sebesar 111,98 Ha dan untuk Tanah Kering 286,12 Ha. Desa Kedungpilang memiliki demografi
+                penduduk dengan jumlah laki-laki sebanyak 1.146 orang dan perempuan sebanyak 1.132 orang. Kepadatan
+                penduduk desa ini ialah sebesar 572 per Km2. Mayoritas penduduk di desa ini berprofesi sebagai
+                petani, peternak, dan pegawai. Desa ini memiliki beberapa komoditas keunggulan, diantaranya Jagung
+                dan Singkong. Di Desa Kedungpilang sendiri terdapat 5 dusun.</p> --}}
+        </div>
+    </section><!-- End Features Section -->
     <!-- ======= Featured Services Section ======= -->
-    <section id="featured-services" class="featured-services">
+    {{-- <section id="featured-services" class="featured-services">
         <div class="container" data-aos="fade-up">
 
             <div class="section-title">
-                <h2>Berita Desa Kedungpilang</h2>
+                <h2>Berita Terbaru Desa Kedungpilang</h2>
             </div>
 
             <div class="row">
@@ -90,36 +99,7 @@
             </div>
 
         </div>
-    </section><!-- End Featured Services Section -->
-
-    <!-- ======= Doctors Section ======= -->
-    <section id="doctors" class="doctors section-bg">
-        <div class="container" data-aos="fade-up">
-
-            <div class="section-title">
-                <h2>Perangkat Desa Kedungpilang</h2>
-            </div>
-
-            <div class="row">
-                @foreach ($perangkat as $perangkat)
-                    <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
-                        <div class="member" data-aos="fade-up" data-aos-delay="100">
-                            <div class="member-img">
-                                <img src="/image/{{ $perangkat->image }}" class="img-fluid" alt="">
-                            </div>
-                            <div class="member-info">
-                                <h4>{{ $perangkat->nama }}</h4>
-                                <h6>{{ $perangkat->jabatan }}</h6>
-                            </div>
-                        </div>
-                    </div>
-                @endforeach
-
-
-            </div>
-
-        </div>
-    </section><!-- End Doctors Section -->
+    </section><!-- End Featured Services Section --> --}}
 
 
     <!-- ======= Cta Section ======= -->
@@ -189,7 +169,34 @@
 
         </div>
     </section><!-- End Features Section -->
+    <!-- ======= Doctors Section ======= -->
+    <section id="doctors" class="doctors section-bg">
+        <div class="container" data-aos="fade-up">
 
+            <div class="section-title">
+                <h2>Perangkat Desa Kedungpilang</h2>
+            </div>
+
+            <div class="row">
+                @foreach ($perangkat as $perangkat)
+                    <div class="col-lg-3 col-md-6 d-flex align-items-stretch mt-4 mb-4">
+                        <div class="member" data-aos="fade-up" data-aos-delay="100">
+                            <div class="member-img">
+                                <img src="/image/{{ $perangkat->image }}" class="img-fluid" alt="">
+                            </div>
+                            <div class="member-info">
+                                <h4>{{ $perangkat->nama }}</h4>
+                                <h6>{{ $perangkat->jabatan }}</h6>
+                            </div>
+                        </div>
+                    </div>
+                @endforeach
+
+
+            </div>
+
+        </div>
+    </section><!-- End Doctors Section -->
     <!-- ======= Services Section ======= -->
     {{-- <section id="services" class="services services">
         <div class="container" data-aos="fade-up">
@@ -225,9 +232,9 @@
             <div class="row">
                 @foreach ($umkm as $umkm)
                     <div class="col-lg-4 col-md-6 icon-box" data-aos="zoom-in" data-aos-delay="100">
-                        <img src="/image/{{ $umkm->image }}" alt="" class="img-fluid" width="100">
-                        <h4>{{ $umkm->title }}</h4>
-                        <p>{{ $umkm->description }}</p>
+                        <img src="/image/{{ $umkm->image }}" alt="" class="img-fluid" width="300">
+                        <h4 class="mt-4">{{ $umkm->title }}</h4>
+                        <p style="text-align: justify">{{ Str::words($umkm->description, 8, '...') }}</p>
                     </div>
                 @endforeach
             </div>
@@ -236,10 +243,10 @@
     </section><!-- End Services Section -->
 
     <!-- ======= Gallery Section ======= -->
-    <section id="gallery" class="gallery">
+    {{-- <section id="gallery" class="gallery">
         <div class="container" data-aos="fade-up">
 
-            <div class="section-title">
+            <div class="section-title" style="margin-top: 70px">
                 <h2>Galeri Desa Kedungpilang</h2>
             </div>
 
@@ -250,11 +257,13 @@
                         <div class="swiper-slide{{ $index === 0 ? 'active' : '' }}">
                             <a class="gallery-lightbox" href="image/{{ $galeri->image }}"> <img
                                     src="image/{{ $galeri->image }}" class="img-fluid" alt=""> </a>
+
                         </div>
                     @endforeach
                 </div>
-                <div class="swiper-pagination" style="margin-top: -400px">
+                <div class="swiper-pagination">
                 </div>
             </div>
         </div>
-    </section><!-- End Gallery Section -->
+    </section><!-- End Gallery Section --> --}}
+@endsection

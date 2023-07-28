@@ -14,14 +14,15 @@
                     <div class="form-group">
                         <label for="">Nama</label>
                         <input type="text" class="form-control" name="nama" placeholder="nama"
-                            value="{{ $perangkat->title }}">
+                            value="{{ $perangkat->nama }}">
                     </div>
                     @error('nama')
                         <small style="color:red">{{ $message }}</small>
                     @enderror
                     <div class="form-group">
                         <label for="">Jabatan</label>
-                        <textarea name="jabatan" id="" cols="30" rows="10" class="form-control" placeholder="jabatan">{{ $perangkat->description }}</textarea>
+                        <input type="text" class="form-control" name="jabatan" placeholder="jabatan"
+                            value="{{ $perangkat->jabatan }}">
                     </div>
                     @error('jabatan')
                         <small style="color:red">{{ $message }}</small>
