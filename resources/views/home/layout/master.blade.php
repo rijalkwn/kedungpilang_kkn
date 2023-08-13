@@ -14,7 +14,7 @@
     <!-- Favicons -->
     {{-- <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon"> --}}
 
-    <link rel="icon" type="image/png" href="/assets/img/logo.png">
+    <link rel="icon" type="image/png" href="{{ url('assets/img/logo-kota-boyolali') }}">
     <!-- Google Fonts -->
     <link
         href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"

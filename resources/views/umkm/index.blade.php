@@ -33,20 +33,21 @@
                         <tr>
                             <td>{{ $i++ }}</td>
                             <td>{{ $umkm->title }}</td>
-                            <td>{{ $umkm->description }}</td>
+                            <td>{{ Str::words($umkm->description, 8, '...') }}</td>
                             <td>
                                 <img src="/image/{{ $umkm->image }}" alt="" class="img-fluid" width="90">
                             </td>
                             <td>
-                                <a href="{{ route('umkm.edit', $umkm->id) }}" class="btn btn-warning">Edit</a>
-                                <br>
-
-                                <form action="{{ route('umkm.destroy', $umkm->id) }}" method="POST">
-                                    @csrf
-                                    @method('DELETE')
-                                    <br> <button type="submit" class="btn btn-danger">Hapus</button>
-                                </form>
+                                <div class="d-flex">
+                                    <a href="{{ route('umkm.edit', $umkm->id) }}" class="btn btn-warning mr-2">Edit</a>
+                                    <form action="{{ route('umkm.destroy', $umkm->id) }}" method="POST">
+                                        @csrf
+                                        @method('DELETE')
+                                        <button type="submit" class="btn btn-danger">Hapus</button>
+                                    </form>
+                                </div>
                             </td>
+
                         </tr>
                     @endforeach
                 </tbody>

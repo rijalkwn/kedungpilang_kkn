@@ -9,16 +9,14 @@
                         <div class="card-body">
                             <h4 class="card-title text-center">{{ $news->title }}</h4>
                             <div class="row justify-content-center">
-                                <div class="col-md-6 text-center">
-                                    <img src="/image/{{ $news->image }}" alt="" class="img-fluid">
+                                <div class="col-lg-12 text-center">
+                                    <img src="/image/{{ $news->image }}" alt="" class="img-fluid img-16x9">
                                 </div>
                             </div>
                             <div class="row mt-4">
                                 <div class="col">
                                     <p class="card-text text-justify" style="text-align: justify;">
-                                        <small
-                                            style="text-align: justify;">{{ $news->created_at->format('d F Y') }}</small><br>
-                                        {{ $news->description }}
+                                        Kedungpilang ({{ $news->created_at->format('j F Y') }}) - {{ $news->description }}
                                     </p>
                                 </div>
 

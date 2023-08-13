@@ -21,9 +21,9 @@
                     @enderror
                     <div class="form-group">
                         <label for="">Level</label>
-                        <select class="form-control" name="level" value="{{ $user->level }}">
-                            <option value="admin">Admin</option>
-                            <option value="superadmin">Superadmin</option>
+                        <select class="form-control" name="level" @if ($user->level === 'superadmin') disabled @endif>
+                            <option value="admin" @if ($user->level === 'admin') selected @endif>Admin</option>
+                            <option value="superadmin" @if ($user->level === 'superadmin') selected @endif>Superadmin</option>
                         </select>
                     </div>
                     @error('level')

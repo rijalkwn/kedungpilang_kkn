@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Edit Data Perangkat Desa Kedungpilang')
+@section('title', 'Tambah Data Perangkat Desa Kedungpilang')
 
 @section('content')
 
@@ -8,12 +8,11 @@
         <a href="/admin/perangkat" class="btn btn-primary mb-3">Kembali</a>
         <div class="row">
             <div class="col-md-12">
-                <form action="{{ route('perangkat.update', $perangkat->id) }}" method="POST" enctype="multipart/form-data">
-                    @method('PUT')
+                <form action="{{ route('perangkat.store') }}" method="POST" enctype="multipart/form-data">
                     @csrf
                     <div class="form-group">
                         <label for="">Nama</label>
-                        <input type="text" class="form-control" name="nama" placeholder="nama"
+                        <input type="text" class="form-control" name="nama" placeholder="Nama"
                             value="{{ $perangkat->nama }}">
                     </div>
                     @error('nama')
@@ -21,16 +20,16 @@
                     @enderror
                     <div class="form-group">
                         <label for="">Jabatan</label>
-                        <input type="text" class="form-control" name="jabatan" placeholder="jabatan"
-                            value="{{ $perangkat->jabatan }}">
+                        <input name="jabatan" id="" cols="30" rows="10" class="form-control"
+                            placeholder="Jabatan" value="{{ $perangkat->jabatan }}">
                     </div>
                     @error('jabatan')
                         <small style="color:red">{{ $message }}</small>
                     @enderror
-                    <img src="/image/{{ $perangkat->image }}" alt="" class="img-fluid">
                     <div class="form-group">
                         <label for="">Gambar</label>
-                        <input type="file" class="form-control" name="image">
+                        <small style="color: red">*Ukuran foto sangat disarankan rasio 3 X 4*</small>
+                        <input type="file" class="form-control" name="image" value="{{ $perangkat->image }}">
                     </div>
                     @error('image')
                         <small style="color:red">{{ $message }}</small>

@@ -35,14 +35,14 @@
                                 <img src="/image/{{ $galeri->image }}" alt="" class="img-fluid" width="90">
                             </td>
                             <td>
-                                <a href="{{ route('galeri.edit', $galeri->id) }}" class="btn btn-warning">Edit</a>
-                                <br>
-
-                                <form action="{{ route('galeri.destroy', $galeri->id) }}" method="POST">
-                                    @csrf
-                                    @method('DELETE')
-                                    <br> <button type="submit" class="btn btn-danger">Hapus</button>
-                                </form>
+                                <div class="d-flex">
+                                    <a href="{{ route('galeri.edit', $galeri->id) }}" class="btn btn-warning mr-2">Edit</a>
+                                    <form action="{{ route('galeri.destroy', $galeri->id) }}" method="POST">
+                                        @csrf
+                                        @method('DELETE')
+                                        <button type="submit" class="btn btn-danger">Hapus</button>
+                                    </form>
+                                </div>
                             </td>
                         </tr>
                     @endforeach

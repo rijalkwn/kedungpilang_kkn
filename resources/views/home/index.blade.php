@@ -155,16 +155,52 @@
                     <div class="icon-box mt-5 mt-lg-0">
                         <i class="bx bx-receipt"></i>
                         <h4>Visi</h4>
-                        <p>Consequuntur sunt aut quasi enim aliquam quae harum pariatur laboris nisi ut aliquip</p>
+                        <p style="text-align: justify; color:black">Berdasarkan perkembangan situasi dan kondisi Desa
+                            Kedungpilang saat
+                            ini, dan terkait dengan
+                            Rencana Pembangunan Jangka Menengah Desa (RPJM-Desa), maka untuk pembangunan Desa Kedungpilang
+                            pada periode 6 (enam) tahun ke depan (tahun 2013-2020), disusun visi sebagai berikut :
+                            <br><strong>“Terwujudnya Kedungpilang sebagai Desa yang mandiri berbasis pertanian, untuk
+                                mencapai
+                                masyarakat yang sehat, cerdas dan lebih sejahtera.”</strong>
+                        </p>
                     </div>
                     <div class="icon-box mt-5">
                         <i class="bx bx-cube-alt"></i>
                         <h4>Misi</h4>
-                        <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt</p>
+                        <p style="text-align: justify; color:black">Untuk mewujudkan visi tersebut, maka misi yang akan
+                            dilakukan
+                            adalah
+                            sebagai berikut :
+                        </p>
+                        <ol style="text-align: justify; color:black" class="ms-5">
+                            <li>Meningkatkan pembangunan infrastruktur yang mendukung perekonomian desa, seperti jalan,
+                                jembatan serta infrastruktur strategis lainnya.</li>
+                            <li>Meningkatkan pembangunan di bidang kesehatan untuk mendorong derajat kesehatan
+                                masyarakat
+                                agar dapat bekerja lebih optimal dan memiliki harapan hidup yang lebih panjang.</li>
+                            <li>Meningkatkan pembangunan di bidang pendidikan untuk mendorong peningkatan kualitas
+                                sumber
+                                daya manusia agar memiliki kecerdasan dan daya saing yang lebih baik.</li>
+                            <li>Meningkatkan pembangunan ekonomi dengan mendorong semakin tumbuh dan berkembangnya
+                                pembangunan di bidang pertanian dalam arti luas, industri, perdagangan dan pariwisata.
+                            </li>
+                            <li>Menciptakan tata kelola pemerintahan yang baik (good governance) berdasarkan
+                                demokratisasi,
+                                transparansi, penegakan hukum, berkeadilan, kesetaraan gender dan mengutamakan pelayanan
+                                kepada
+                                masyarakat.</li>
+                            <li>Mengupayakan pelestarian sumber daya alam untuk memenuhi kebutuhan dan pemerataan
+                                pembangunan
+                                guna meningkatkan perekonomian.</li>
+                        </ol>
                     </div>
                 </div>
-                <div class="image col-lg-6 order-1 order-lg-2" style='background-image: url("assets/img/kepalamotto.png");'
-                    data-aos="zoom-in"></div>
+                <div class="col-lg-6 order-1 order-lg-2 my-auto text-center">
+                    <img src="{{ asset('assets/img/kepaladesa.png') }}" class="img-fluid" alt="">
+                </div>
+                {{-- <div class="image col-lg-6 order-1 order-lg-2 my-auto"
+                    style='background-image: url("assets/img/kepaladesa.png");' data-aos="zoom-in"></div> --}}
             </div>
 
         </div>
@@ -230,11 +266,21 @@
             </div>
 
             <div class="row">
-                @foreach ($umkm as $umkm)
-                    <div class="col-lg-4 col-md-6 icon-box" data-aos="zoom-in" data-aos-delay="100">
-                        <img src="/image/{{ $umkm->image }}" alt="" class="img-fluid" width="300">
-                        <h4 class="mt-4">{{ $umkm->title }}</h4>
-                        <p style="text-align: justify">{{ Str::words($umkm->description, 8, '...') }}</p>
+                @foreach ($umkm as $umkmItem)
+                    <div class="col-md-3 col-lg-4 d-flex align-items-stretch mb-4 mb-lg-0 mt-4">
+                        <a href="/umkm{{ $umkmItem->id }}" style="text-decoration: none; color: inherit;">
+                            <div class="icon-box" data-aos="fade-up" data-aos-delay="200">
+                                <div class="member-img">
+                                    <img src="/image/{{ $umkmItem->image }}" alt="" class=""
+                                        style="width: 300px; height: 200px; object-fit: cover;">
+                                </div>
+                                <br>
+                                <div class="text-center">
+                                    <h4>{{ Str::words($umkmItem->title, 6, '...') }}</h4>
+                                </div>
+                                <p class="description">{{ Str::words($umkmItem->description, 8, '...') }}</p>
+                            </div>
+                        </a>
                     </div>
                 @endforeach
             </div>

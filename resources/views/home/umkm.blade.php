@@ -13,8 +13,8 @@
                     <div class="col-md-3 col-lg-4 d-flex align-items-stretch mb-4 mb-lg-0 mt-4">
                         <a href="/umkm{{ $umkmItem->id }}" style="text-decoration: none; color: inherit;">
                             <div class="icon-box" data-aos="fade-up" data-aos-delay="200">
-                                <div class="member-img">
-                                    <img src="/image/{{ $umkmItem->image }}" alt="" class=""
+                                <div class="member-img d-flex justify-content-center align-items-center">
+                                    <img src="/image/{{ $umkmItem->image }}" alt="" class="img-fluid"
                                         style="width: 300px; height: 200px; object-fit: cover;">
                                 </div>
                                 <br>

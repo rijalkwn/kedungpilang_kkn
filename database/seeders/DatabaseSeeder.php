@@ -18,46 +18,16 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         User::create([
-            'name' => 'Admin Desa Kedungpilang',
+            'name' => 'Admin Satu Desa Kedungpilang',
             'username' => 'admindesa',
             'level' => 'superadmin',
             'password' => Hash::make('admindesa123')
         ]);
         User::create([
-            'name' => 'Admin Dukuh Kedungpilang',
-            'username' => 'adminkedungpilang',
+            'name' => 'Admin Dua Desa Kedungpilang',
+            'username' => 'admindesa2',
             'level' => 'admin',
-            'password' => Hash::make('kedungpilang123')
-        ]);
-        User::create([
-            'name' => 'Admin Dukuh Gambir',
-            'username' => 'admingambir',
-            'level' => 'admin',
-            'password' => Hash::make('gambir123')
-        ]);
-        User::create([
-            'name' => 'Admin Dukuh Kunci Ombo',
-            'username' => 'adminkunciombo',
-            'level' => 'admin',
-            'password' => Hash::make('kunciombo123')
-        ]);
-        User::create([
-            'name' => 'Admin Dukuh Kedung Bulu',
-            'username' => 'adminkedungbulu',
-            'level' => 'admin',
-            'password' => Hash::make('kedungbulu123')
-        ]);
-        User::create([
-            'name' => 'Admin Dukuh Kedung Padas',
-            'username' => 'adminkedungpadas',
-            'level' => 'admin',
-            'password' => Hash::make('kedungpadas123')
-        ]);
-        User::create([
-            'name' => 'Admin Bumdes',
-            'username' => 'adminbumdes',
-            'level' => 'admin',
-            'password' => Hash::make('bumdes123')
+            'password' => Hash::make('admindesa123')
         ]);
     }
 }

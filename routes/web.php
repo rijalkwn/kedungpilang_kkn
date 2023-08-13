@@ -14,7 +14,7 @@ Route::get('/', '\App\Http\Controllers\HomeController@index');
 Route::get('/beranda', '\App\Http\Controllers\HomeController@index');
 // Route::get('/about', '\App\Http\Controllers\HomeController@index');
 // Route::get('/contact', '\App\Http\Controllers\HomeController@index');
-// Route::get('/event', '\App\Http\Controllers\HomeController@event');
+Route::get('/informasilayanan', '\App\Http\Controllers\HomeController@informasilayanan');
 Route::get('/galeri', '\App\Http\Controllers\HomeController@galeri');
 Route::get('/potensi', '\App\Http\Controllers\HomeController@potensi');
 // Route::get('/datadesa', '\App\Http\Controllers\HomeController@data');
@@ -43,9 +43,19 @@ Route::group(['middleware' => ['auth', 'ceklevel:superadmin,admin']], function (
     //password
     Route::resource('admin/password', '\App\Http\Controllers\PasswordController')->middleware('auth');
     //pupuk
+    Route::resource('admin/bumdes', '\App\Http\Controllers\BumdesController')->middleware('auth');
     Route::resource('admin/pupuk', '\App\Http\Controllers\PupukController')->middleware('auth');
     Route::resource('admin/penyewaan', '\App\Http\Controllers\PenyewaanController')->middleware('auth');
     Route::resource('admin/mitrabumdes', '\App\Http\Controllers\MitrabumdesController')->middleware('auth');
+    Route::resource('admin/bpd', '\App\Http\Controllers\BPDController')->middleware('auth');
+    Route::resource('admin/karangtaruna', '\App\Http\Controllers\KarangtarunaController')->middleware('auth');
+    Route::resource('admin/rwrt', '\App\Http\Controllers\RwrtController')->middleware('auth');
+    Route::resource('admin/linmas', '\App\Http\Controllers\LinmasController')->middleware('auth');
+    Route::resource('admin/pkk', '\App\Http\Controllers\PkkController')->middleware('auth');
+    Route::resource('admin/belanjadesa', '\App\Http\Controllers\BelanjadesaController')->middleware('auth');
+    Route::resource('admin/pendapatandesa', '\App\Http\Controllers\PendapatandesaController')->middleware('auth');
+    Route::resource('admin/pembiayaandesa', '\App\Http\Controllers\PembiayaandesaController')->middleware('auth');
+    Route::resource('admin/datadesa', '\App\Http\Controllers\DatadesaController')->middleware('auth');
 });
 
 Route::group(['middleware' => ['auth', 'ceklevel:superadmin']], function () {
@@ -124,3 +134,10 @@ Route::get('/bumdes', '\App\Http\Controllers\HomeController@bumdes');
 ROute::get('/ketersediaanpupuk', '\App\Http\Controllers\HomeController@pupuk');
 ROute::get('/mitrabumdes', '\App\Http\Controllers\HomeController@mitrabumdes');
 ROute::get('/penyewaanalat', '\App\Http\Controllers\HomeController@penyewaanalat');
+ROute::get('/bpd', '\App\Http\Controllers\HomeController@bpd');
+ROute::get('/linmas', '\App\Http\Controllers\HomeController@linmas');
+ROute::get('/karangtaruna', '\App\Http\Controllers\HomeController@karangtaruna');
+ROute::get('/rwrt', '\App\Http\Controllers\HomeController@rwrt');
+ROute::get('/pkk', '\App\Http\Controllers\HomeController@pkk');
+ROute::get('/apbddesa', '\App\Http\Controllers\HomeController@apbddesa');
+ROute::get('/datadesa', '\App\Http\Controllers\HomeController@datadesa');

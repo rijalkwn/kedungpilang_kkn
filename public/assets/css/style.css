@@ -461,6 +461,15 @@ h6 {
   align-items: flex-end;
 }
 
+.carousel-image {
+    background-size: contain; /* Menyesuaikan ukuran gambar agar sesuai dengan lebar dan tinggi kontainer */
+    background-repeat: no-repeat; /* Menghindari pengulangan gambar jika ukurannya lebih kecil */
+    background-position: center; /* Mengatur posisi gambar agar tetap berada di tengah kontainer */
+    width: 100%; /* Menyesuaikan lebar gambar dengan lebar kontainer */
+    height: 100%; /* Menyesuaikan tinggi gambar dengan tinggi kontainer */
+}
+
+
 #hero .container {
   text-align: center;
   background: rgba(255, 255, 255, 0.9);
@@ -749,7 +758,10 @@ section {
   color: #3fbbc0;
   transition: all 0.3s ease-in-out;
 }
-
+.fit-content{
+    width: fit-content;
+    margin: auto;
+}
 .featured-services .title {
   font-weight: 700;
   margin-bottom: 15px;

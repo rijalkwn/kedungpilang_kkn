@@ -38,14 +38,15 @@
                                 <img src="/image/{{ $perangkat->image }}" alt="" class="img-fluid" width="90">
                             </td>
                             <td>
-                                <a href="{{ route('perangkat.edit', $perangkat->id) }}" class="btn btn-warning">Edit</a>
-                                <br>
-
-                                <form action="{{ route('perangkat.destroy', $perangkat->id) }}" method="POST">
-                                    @csrf
-                                    @method('DELETE')
-                                    <br> <button type="submit" class="btn btn-danger">Hapus</button>
-                                </form>
+                                <div class="d-flex">
+                                    <a href="{{ route('perangkat.edit', $perangkat->id) }}"
+                                        class="btn btn-warning mr-2">Edit</a>
+                                    <form action="{{ route('perangkat.destroy', $perangkat->id) }}" method="POST">
+                                        @csrf
+                                        @method('DELETE')
+                                        <button type="submit" class="btn btn-danger">Hapus</button>
+                                    </form>
+                                </div>
                             </td>
                         </tr>
                     @endforeach

@@ -35,15 +35,15 @@
                             <td>
                                 <img src="/image/{{ $news->image }}" alt="" class="img-fluid" width="90">
                             </td>
-                            <td>
-                                <a href="{{ route('news.edit', $news->id) }}" class="btn btn-warning">Edit</a>
-                                <br>
-
-                                <form action="{{ route('news.destroy', $news->id) }}" method="POST">
-                                    @csrf
-                                    @method('DELETE')
-                                    <br> <button type="submit" class="btn btn-danger">Hapus</button>
-                                </form>
+                            <td class="fit-content">
+                                <div class="d-flex">
+                                    <a href="{{ route('news.edit', $news->id) }}" class="btn btn-warning mr-2">Edit</a>
+                                    <form action="{{ route('news.destroy', $news->id) }}" method="POST">
+                                        @csrf
+                                        @method('DELETE')
+                                        <button type="submit" class="btn btn-danger">Hapus</button>
+                                    </form>
+                                </div>
                             </td>
                         </tr>
                     @endforeach

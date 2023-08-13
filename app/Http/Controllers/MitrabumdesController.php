@@ -10,13 +10,13 @@ class MitrabumdesController extends Controller
     public function index()
     {
         $mitrabumdes = Mitrabumdes::all();
-        return view('mitrabumdes.index', compact('mitrabumdes'));
+        return view('organisasi.bumdes.mitrabumdes.index', compact('mitrabumdes'));
     }
 
     public function create()
     {
         $title = 'Tambah Mitra Bumdes';
-        return view('mitrabumdes.create', compact('title'));
+        return view('organisasi.bumdes.mitrabumdes.create', compact('title'));
     }
 
     public function store(Request $request)
@@ -54,7 +54,7 @@ class MitrabumdesController extends Controller
     public function edit($id)
     {
         $mitrabumdes = Mitrabumdes::findOrFail($id);
-        return view('mitrabumdes.edit', compact('mitrabumdes'));
+        return view('organisasi.bumdes.mitrabumdes.edit', compact('mitrabumdes'));
     }
 
     public function update(Request $request, $id)

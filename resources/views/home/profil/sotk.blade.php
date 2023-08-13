@@ -7,7 +7,7 @@
             </div>
             {{-- gambar --}}
             <div class="row my-4">
-                <img src="/assets/img/logo.png" alt="">
+                <img src="/assets/img/sotk.png" alt="">
             </div>
             <div class="section-title">
                 <h2>Perangkat Desa</h2>

@@ -10,13 +10,13 @@ class PupukController extends Controller
     public function index()
     {
         $pupuk = Pupuk::all();
-        return view('pupuk.index', compact('pupuk'));
+        return view('organisasi.bumdes.pupuk.index', compact('pupuk'));
     }
 
     public function create()
     {
         $title = 'Tambah Pupuk';
-        return view('pupuk.create', compact('title'));
+        return view('organisasi.bumdes.pupuk.create', compact('title'));
     }
 
     public function store(Request $request)
@@ -42,7 +42,7 @@ class PupukController extends Controller
     public function edit($id)
     {
         $pupuk = Pupuk::findOrFail($id);
-        return view('pupuk.edit', compact('pupuk'));
+        return view('organisasi.bumdes.pupuk.edit', compact('pupuk'));
     }
 
     public function update(Request $request, $id)

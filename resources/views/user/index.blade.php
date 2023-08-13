@@ -35,16 +35,17 @@
                             <td>{{ $user->name }}</td>
                             <td>{{ $user->username }}</td>
                             <td>{{ $user->level }}</td>
-                            <td>
-                                <a href="{{ route('user.edit', $user->id) }}" class="btn btn-warning">Edit</a>
-
-                                @if ($user->level !== 'superadmin')
-                                    <form action="{{ route('user.destroy', $user->id) }}" method="POST">
-                                        @csrf
-                                        @method('DELETE')
-                                        <button type="submit" class="btn btn-danger">Hapus</button>
-                                    </form>
-                                @endif
+                            <td class="fit-content">
+                                <div class="d-flex">
+                                    <a href="{{ route('user.edit', $user->id) }}" class="btn btn-warning mr-2">Edit</a>
+                                    @if ($user->level !== 'superadmin')
+                                        <form action="{{ route('user.destroy', $user->id) }}" method="POST">
+                                            @csrf
+                                            @method('DELETE')
+                                            <button type="submit" class="btn btn-danger">Hapus</button>
+                                        </form>
+                                    @endif
+                                </div>
                             </td>
                         </tr>
                     @endforeach

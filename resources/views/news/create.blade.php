@@ -26,8 +26,7 @@
                     @enderror
                     <div class="form-group">
                         <label for="">Gambar </label>
-                        <strong style="color: red">*foto disarankan berbentuk
-                            landscape</strong>
+                        <small style="color: red">*Ukuran foto sangat disarankan rasio 16 X 9*</small>
                         <input type="file" class="form-control" name="image">
                     </div>
                     @error('image')

@@ -1,6 +1,7 @@
 <nav id="navbar" class="navbar order-last order-lg-0">
     <ul>
         <li><a class="nav-link scrollto" href="/">Beranda</a></li>
+
         <li class="dropdown">
             <a href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
                 <span>PROFIL</span>
@@ -20,43 +21,82 @@
 
 
         {{-- <li><a class="nav-link scrollto" href="/datadesa">Data Desa</a></li> --}}
+
         <li class="dropdown">
             <a href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                <span>LEMBAGA</span>
+                <i class="bi bi-chevron-down"></i>
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                <li><a class="dropdown-item" href="/pkk">PKK</a></li>
+                <li><a class="dropdown-item" href="/bpd">BPD</a></li>
+                <li><a class="dropdown-item" href="/rwrt">RW RT</a></li>
+                <li><a class="dropdown-item" href="/karangtaruna">KARANG TARUNA</a></li>
+                <li><a class="dropdown-item" href="/linmas">LINMAS</a></li>
+                <li class="dropdown">
+                    <a href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        <span>BUMDES</span>
+                        <i class="bi bi-chevron-right"></i>
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                        <li><a class="dropdown-item" href="/bumdes">Struktur Bumdes</a></li>
+                        <li><a class="dropdown-item" href="/ketersediaanpupuk">Info Ketersediaan Pupuk</a></li>
+                        <li><a class="dropdown-item" href="/penyewaanalat">Info Penyewaan Alat</a></li>
+                        <li><a class="dropdown-item" href="/mitrabumdes">Mitra BUMDES</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li class="dropdown">
+            <a href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                <span>TRANSPARANSI</span>
+                <i class="bi bi-chevron-down"></i>
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                <li><a class="dropdown-item" href="/apbddesa">APB Desa</a></li>
+            </ul>
+        </li>
+        <li><a class="nav-link scrollto" href="/informasilayanan">Informasi Layanan</a></li>
+        {{-- <li class="dropdown">
+            <a class="dropdown-item" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown"
+                aria-expanded="false">
                 <span>INFORMASI LAYANAN</span>
                 <i class="bi bi-chevron-down"></i>
             </a>
             <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                <li><a href="/kk">Penerbitan KK</a></li>
-                <li><a href="/ktp">Penerbitan KTP</a></li>
-                <li><a href="/pindahdatang">Penerbitan Surat Keterangan Pindah Datang</a></li>
-                <li><a href="/kia">Penerbitan Kartu Identitas Anak (KIA)</a></li>
-                <li><a href="/tinggalsementara">Keterangan Tinggal Sementara</a></li>
-                <li><a href="/aktakelahiran">Pembuatan Akta Kelahiran</a></li>
-                <li><a href="/aktaperkawinan">Pencatatan Akta Perkawinan</a></li>
-                <li><a href="/aktakematian">Pencatatan Akta Kematian</a></li>
-                <li><a href="/aktaperceraian">Pencatatan Akta Perceraian</a></li>
-                <li><a href="/perubahannama">Pencatatan Perubahan Nama</a></li>
-                <li><a href="/aktapengakuananak">Pencatatan Akta Pengakuan Anak</a></li>
-                <li><a href="/pengesahananak">Pencatatan Pengesahan Anak</a></li>
-                <li><a href="/pengangkatananak">Pencatatan Pengangkatan Anak</a></li>
-            </ul>
-        </li>
-        {{-- <li><a class="nav-link scrollto" href="/event">EVENT</a></li> --}}
-        <li><a class="nav-link scrollto" href="/berita">BERITA</a></li>
-        <li><a class="nav-link scrollto" href="/galeri">GALERI</a></li>
+                <li><a class="dropdown-item" href="/kk">Penerbitan KK</a></li>
+                <li><a class="dropdown-item" href="/ktp">Penerbitan KTP</a></li>
+                <li><a class="dropdown-item" href="/pindahdatang">Penerbitan Surat Keterangan Pindah Datang</a></li>
+                <li><a class="dropdown-item" href="/kia">Penerbitan Kartu Identitas Anak (KIA)</a></li>
+                <li><a class="dropdown-item" href="/tinggalsementara">Keterangan Tinggal Sementara</a></li>
+                <li><a class="dropdown-item" href="/aktakelahiran">Pembuatan Akta Kelahiran</a></li>
+                <li><a class="dropdown-item" href="/aktaperkawinan">Pencatatan Akta Perkawinan</a></li>
+                <li><a class="dropdown-item" href="/aktakematian">Pencatatan Akta Kematian</a></li>
+                <li><a class="dropdown-item" href="/aktaperceraian">Pencatatan Akta Perceraian</a></li>
+                <li><a class="dropdown-item" href="/perubahannama">Pencatatan Perubahan Nama</a></li>
+                <li><a class="dropdown-item" href="/aktapengakuananak">Pencatatan Akta Pengakuan Anak</a></li>
+                <li><a class="dropdown-item" href="/pengesahananak">Pencatatan Pengesahan Anak</a></li>
+                <li><a class="dropdown-item" href="/pengangkatananak">Pencatatan Pengangkatan Anak</a></li>
+            </ul> --}}
+        {{-- </li> --}}
+        {{-- <li><a class="nav-link scrollto" href="/berita">BERITA</a></li>
+        <li><a class="nav-link scrollto" href="/galeri">GALERI</a></li> --}}
+
+        {{-- <li><a class="nav-link scrollto" href="/umkm">UMKM</a></li> --}}
         <li class="dropdown">
-            <a href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
-                <span>BUMDES</span>
+            <a class="dropdown-item" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                <span>INFORMASI PUBLIK</span>
                 <i class="bi bi-chevron-down"></i>
             </a>
             <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                <li><a href="/ketersediaanpupuk">Info Ketersediaan Pupuk</a></li>
-                <li><a href="/penyewaanalat">Info Penyewaan Alat</a></li>
-                <li><a href="/mitrabumdes">Mitra BUMDES</a></li>
+                <li><a class="dropdown-item" href="/berita">BERITA</a></li>
+                <li><a class="dropdown-item" href="/datadesa">DATA DESA</a></li>
+                <li><a class="dropdown-item" href="/galeri">GALERI</a></li>
+                <li><a class="dropdown-item" href="/umkm">UMKM</a></li>
             </ul>
         </li>
-
-        <li><a class="nav-link scrollto" href="/umkm">UMKM</a></li>
     </ul>
     <i class="bi bi-list mobile-nav-toggle"></i>
 </nav><!-- .navbar -->

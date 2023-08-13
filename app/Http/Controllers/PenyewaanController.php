@@ -10,13 +10,13 @@ class PenyewaanController extends Controller
     public function index()
     {
         $penyewaan = Penyewaan::all();
-        return view('penyewaan.index', compact('penyewaan'));
+        return view('organisasi.bumdes.penyewaan.index', compact('penyewaan'));
     }
 
     public function create()
     {
         $title = 'Tambah Penyewaan';
-        return view('penyewaan.create', compact('title'));
+        return view('organisasi.bumdes.penyewaan.create', compact('title'));
     }
 
     public function store(Request $request)
@@ -40,7 +40,7 @@ class PenyewaanController extends Controller
     public function edit($id)
     {
         $penyewaan = Penyewaan::findOrFail($id);
-        return view('penyewaan.edit', compact('penyewaan'));
+        return view('organisasi.bumdes.penyewaan.edit', compact('penyewaan'));
     }
 
     public function update(Request $request, $id)

@@ -20,6 +20,16 @@ use App\Models\Service;
 use App\Models\Testimoni;
 use App\Models\Pupuk;
 use App\Models\Mitrabumdes;
+use App\Models\BPD;
+use App\Models\linmas;
+use App\Models\karangtaruna;
+use App\Models\rwrt;
+use App\Models\pkk;
+use App\Models\Bumdes;
+use App\Models\Belanjadesa;
+use App\Models\Pendapatandesa;
+use App\Models\Pembiayaandesa;
+use App\Models\Datadesa;
 
 class HomeController extends Controller
 {
@@ -98,7 +108,7 @@ class HomeController extends Controller
     {
         $title = 'Pupuk';
         $pupuk = Pupuk::all();
-        return view('home.bumdes.pupuk', compact(
+        return view('home.organisasi.bumdes.pupuk', compact(
             'pupuk',
             'title',
         ));
@@ -107,8 +117,10 @@ class HomeController extends Controller
     public function bumdes()
     {
         $title = 'Bumdes';
-        return view('home.bumdes.bumdes', compact(
+        $bumdes = Bumdes::all();
+        return view('home.organisasi.bumdes.bumdes', compact(
             'title',
+            'bumdes',
         ));
     }
 
@@ -116,7 +128,7 @@ class HomeController extends Controller
     {
         $title = 'Mitra Bumdes';
         $mitrabumdes = Mitrabumdes::all();
-        return view('home.bumdes.mitrabumdes', compact(
+        return view('home.organisasi.bumdes.mitrabumdes', compact(
             'mitrabumdes',
             'title',
         ));
@@ -126,9 +138,107 @@ class HomeController extends Controller
     {
         $title = 'Penyewaan Alat';
         $penyewaan = Penyewaan::all();
-        return view('home.bumdes.penyewaan', compact(
+        return view('home.organisasi.bumdes.penyewaan', compact(
             'title',
             'penyewaan',
+        ));
+    }
+
+    public function bpd()
+    {
+        $title = 'BPD';
+        $bpd = BPD::all();
+        return view('home.organisasi.bpd', compact(
+            'title',
+            'bpd',
+        ));
+    }
+
+    //linmas
+    public function linmas()
+    {
+        $title = 'Linmas';
+        $linmas = Linmas::all();
+        return view('home.organisasi.linmas', compact(
+            'title',
+            'linmas',
+        ));
+    }
+
+    //pkk
+    public function pkk()
+    {
+        $title = 'PKK';
+        $pkkdesa = Pkk::where('tingkat', 'Desa Kedungpilang')->get();
+        $pkkkedungpilang = Pkk::where('tingkat', 'Dusun Kedungpilang')->get();
+        $pkkgambir = Pkk::where('tingkat', 'Dusun Gambir')->get();
+        $pkkkunciombo = Pkk::where('tingkat', 'Dusun Kunciombo')->get();
+        $pkkkedungbulu = Pkk::where('tingkat', 'Dusun Kedung Bulu')->get();
+        $pkkkedungpadas = Pkk::where('tingkat', 'Dusun Kedung Padas')->get();
+
+        return view('home.organisasi.pkk', compact(
+            'title',
+            'pkkkedungpilang',
+            'pkkdesa',
+            'pkkgambir',
+            'pkkkunciombo',
+            'pkkkedungbulu',
+            'pkkkedungpadas',
+        ));
+    }
+
+    //karang taruna
+    public function karangtaruna()
+    {
+        $title = 'Karang Taruna';
+        $karangtaruna = Karangtaruna::all();
+        return view('home.organisasi.karangtaruna', compact(
+            'title',
+            'karangtaruna',
+        ));
+    }
+
+    //rwrt
+    public function rwrt()
+    {
+        $title = 'RW/RT';
+        $rwrt = Rwrt::all();
+        return view('home.organisasi.rwrt', compact(
+            'title',
+            'rwrt',
+        ));
+    }
+
+    //apbddesa
+    public function apbddesa()
+    {
+        $title = 'APBDesa';
+        $belanjadesa = Belanjadesa::all();
+        $pendapatandesa = Pendapatandesa::all();
+        $pembiayaandesa = Pembiayaandesa::all();
+        return view('home.transparansi.apbddesa', compact(
+            'title',
+            'belanjadesa',
+            'pendapatandesa',
+            'pembiayaandesa',
+        ));
+    }
+
+    public function datadesa()
+    {
+        $title = 'Data Desa';
+        $datadesa = Datadesa::latest()->get();
+        return view('home.profil.datadesa', compact(
+            'title',
+            'datadesa',
+        ));
+    }
+
+    public function informasilayanan()
+    {
+        $title = 'Informasi Layanan';
+        return view('home.layanan.layanan', compact(
+            'title',
         ));
     }
 }

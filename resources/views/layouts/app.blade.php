@@ -69,40 +69,29 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                 </p>
                             </a>
                         </li>
-
                         <li class="nav-item menu-open">
                             <a href="#" class="nav-link">
                                 <i class="nav-icon fas fa-th"></i>
                                 <p>
-                                    Data Master
-                                    <i class="right fas fa-angle-left"></i>
+                                    Data Informasi Publik
+                                    <i class="right fas fa-angle-right"></i>
                                 </p>
                             </a>
                             <ul class="nav nav-treeview">
-                                {{-- <li class="nav-item">
-                                    <a href="/admin/sliders" class="nav-link">
-                                        <i class="far fa-circle nav-icon"></i>
-                                        <p>Data Sliders</p>
-                                    </a>
-                                </li> --}}
                                 <li class="nav-item">
                                     <a href="/admin/news" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Berita</p>
                                     </a>
                                 </li>
-                                {{-- <li class="nav-item">
-                                    <a href="/admin/data" class="nav-link">
-                                        <i class="far fa-circle nav-icon"></i>
-                                        <p>Data Desa</p>
-                                    </a>
-                                </li> --}}
-                                {{-- <li class="nav-item">
-                                    <a href="/admin/services" class="nav-link">
-                                        <i class="far fa-circle nav-icon"></i>
-                                        <p>Services</p>
-                                    </a>
-                                </li> --}}
+                                @if (auth()->user()->level == 'superadmin')
+                                    <li class="nav-item">
+                                        <a href="/admin/datadesa" class="nav-link">
+                                            <i class="far fa-circle nav-icon"></i>
+                                            <p>Data Desa</p>
+                                        </a>
+                                    </li>
+                                @endif
                                 <li class="nav-item">
                                     <a href="/admin/umkm" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
@@ -115,6 +104,17 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                         <p>Galeri</p>
                                     </a>
                                 </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item menu-open">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon fas fa-th"></i>
+                                <p>
+                                    Data Lembaga
+                                    <i class="right fas fa-angle-right"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
                                 <li class="nav-item">
                                     <a href="/admin/pupuk" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
@@ -133,28 +133,75 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                         <p>Mitra BUMDES</p>
                                     </a>
                                 </li>
-                                {{-- <li class="nav-item">
-                                    <a href="/admin/event" class="nav-link">
+                                <li class="nav-item">
+                                    <a href="/admin/bpd" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
-                                        <p>Event</p>
+                                        <p>BPD</p>
                                     </a>
-                                </li> --}}
-                                @if (auth()->user()->level == 'superadmin')
-                                    {{-- <li class="nav-item">
-                                        <a href="/admin/sambutan" class="nav-link">
-                                            <i class="far fa-circle nav-icon"></i>
-                                            <p>Sambutan</p>
-                                        </a>
-                                    </li> --}}
-                                    <li class="nav-item">
-                                        <a href="/admin/perangkat" class="nav-link">
-                                            <i class="far fa-circle nav-icon"></i>
-                                            <p>Perangkat</p>
-                                        </a>
-                                    </li>
-                                @endif
+                                </li>
+                                <li class="nav-item">
+                                    <a href="/admin/karangtaruna" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Karang Taruna</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="/admin/rwrt" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>RW RT</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="/admin/linmas" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>LINMAS</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="/admin/pkk" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>PKK</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="/admin/bumdes" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>BUMDES</p>
+                                    </a>
+                                </li>
                             </ul>
                         </li>
+                        @if (auth()->user()->level == 'superadmin')
+                            <li class="nav-item menu-open">
+                                <a href="#" class="nav-link">
+                                    <i class="nav-icon fas fa-th"></i>
+                                    <p>
+                                        Data Transparansi
+                                        <i class="right fas fa-angle-right"></i>
+                                    </p>
+                                </a>
+                                <ul class="nav nav-treeview">
+                                    <li class="nav-item">
+                                        <a href="/admin/pendapatandesa" class="nav-link">
+                                            <i class="far fa-circle nav-icon"></i>
+                                            <p>Pendapatan Desa</p>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="/admin/belanjadesa" class="nav-link">
+                                            <i class="far fa-circle nav-icon"></i>
+                                            <p>Belanja Desa</p>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="/admin/pembiayaandesa" class="nav-link">
+                                            <i class="far fa-circle nav-icon"></i>
+                                            <p>Pembiayaan Desa</p>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                        @endif
                         @if (auth()->user()->level == 'superadmin')
                             <li class="nav-item">
                                 <a href="/admin/user" class="nav-link">
@@ -164,16 +211,15 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                     </p>
                                 </a>
                             </li>
-                            <li class="nav-item">
-                                <a href="/admin/password" class="nav-link">
-                                    <i class="nav-icon fas fa-lock"></i>
-                                    <p>
-                                        Ganti Password
-                                    </p>
-                                </a>
-                            </li>
                         @endif
-
+                        <li class="nav-item">
+                            <a href="/admin/password" class="nav-link">
+                                <i class="nav-icon fas fa-lock"></i>
+                                <p>
+                                    Ganti Password
+                                </p>
+                            </a>
+                        </li>
                         <li class="nav-item">
                             <a href="/logout" class="nav-link">
                                 <i class="nav-icon fas fa-arrow-left"></i>
@@ -249,7 +295,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
     </div> -->
             <!-- Default to the left -->
             <div class="copyright text-center">
-                &copy; Copyright <strong><span>KKN UNDIP TIM II Tahun 2022/2023</span></strong>.
+                &copy; Copyright <strong><span> 2023. DESA KEDUNGPILANG</span></strong>.
             </div>
         </footer>
     </div>
